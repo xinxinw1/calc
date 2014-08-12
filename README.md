@@ -4,6 +4,42 @@ This is an arbitrary precision online calculator.
 
 Run it at http://xinxinw1.github.io/calc/
 
+## Examples
+
+Calculate pi to 1000 decimals
+
+`pi(1000)`
+
+Pythagorean theorem
+
+`x=3, y=4, sqrt(x^2+y^2)`
+
+Euler's formula
+
+`x=1, exp(i*x)`
+`x=1, cos(x)+i*sin(x)`
+
+Strange complex number formula that always results in a real number
+
+`x=2, y=3, sqrt(x+y*i)+sqrt(x-y*i)`
+
+Square root of -1
+
+`sqrt(-1)`
+
+Square root of 2 to 1000 decimals
+
+`sqrt(2, 1000)`
+
+Amazing identity (the 20 is just for precision)
+
+`x=2, y=5, cbrt(x+sqrt(y, 20))+cbrt(x-sqrt(y, 20))`
+
+[Frank Nelson Cole's famous number](http://en.wikipedia.org/wiki/Frank_Nelson_Cole)
+
+`193707721 * 761838257287`
+`2^67 - 1`
+
 ## How to use
 
 Simply type the expression you want to calculate into the bar at the bottom and press enter. An example is already inputed for you.
