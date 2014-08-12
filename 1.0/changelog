@@ -1,5 +1,0 @@
-Version 1.0 - Sept 12, 2012 18:32
-
-- working implementation of basic functions +, -, *, /, ^, and !
-- working implementation of sqrt, cbrt, exp, abs, arg, bin
-- working GUI with debug feature

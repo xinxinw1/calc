@@ -1,4 +1,0 @@
-Version 1.4 - Oct 26, 2012 18:39
-
-- fixed cos of negative numbers
-- fixed pow of negative numbers to numbers with decimal

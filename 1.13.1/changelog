@@ -1,4 +1,0 @@
-Version 1.13.1 - Mar 28, 2013 17:46
-
-- prec-math 1.7.1
-  - fixed bug in lnr: changed tens++ to twos++; fives++: lnr(9) now works
