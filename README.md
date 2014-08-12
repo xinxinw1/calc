@@ -19,6 +19,10 @@ Euler's formula
 `x=1, exp(i*x)`  
 `x=1, cos(x)+i*sin(x)`
 
+Factorial of 1000
+
+`1000!`
+
 Strange complex number formula that always results in a real number
 
 `x=2, y=3, sqrt(x+y*i)+sqrt(x-y*i)`
