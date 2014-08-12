@@ -23,6 +23,10 @@ Factorial of 1000
 
 `1000!`
 
+Divide 1 by 127 to 1000 decimal places
+
+`div(1, 127, 1000)`
+
 Strange complex number formula that always results in a real number
 
 `x=2, y=3, sqrt(x+y*i)+sqrt(x-y*i)`
