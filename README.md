@@ -16,7 +16,7 @@ Pythagorean theorem
 
 Euler's formula
 
-`x=1, exp(i*x)`
+`x=1, exp(i*x)`  
 `x=1, cos(x)+i*sin(x)`
 
 Strange complex number formula that always results in a real number
@@ -37,7 +37,7 @@ Amazing identity (the 20 is just for precision)
 
 [Frank Nelson Cole's famous number](http://en.wikipedia.org/wiki/Frank_Nelson_Cole)
 
-`193707721 * 761838257287`
+`193707721 * 761838257287`  
 `2^67 - 1`
 
 ## How to use
