@@ -1,0 +1,11 @@
+RewriteEngine on
+
+RewriteRule ^1\.([^/]+)/(.*)$ /codes/apps/calculator/1.$1/$2 [L]
+RewriteRule ^2\.([^/]+)/(.*)$ /codes/apps/calculator/2.$1/$2 [L]
+RewriteRule ^([^/]+)/calculator\.(.*)$ $1/calc.$2 [L]
+RewriteRule ^([^/]+)/complex-math\.(.*)$ $1/calc.$2 [L]
+
+RewriteRule ^3\.x/(.*)$ 3.0/$1 [L,env=nocache:true]
+RewriteRule ^latest/(.*)$ 3.x/$1 [L,env=nocache:true]
+
+Header set Cache-Control no-cache env=REDIRECT_nocache

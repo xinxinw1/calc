@@ -1,0 +1,15 @@
+Version 1.2 - Oct 7, 2012 18:50
+
+- replaced all uses of eval
+- changed log function to write to page only once at the end
+- implemented decently fast expr and lnr functions
+- pow now sends real number pows to powr
+- greatly increased efficiency of multr
+- fixed bug in powrd: powrd(a, 0) now returns 1
+- fixed bug in sqrtr: sqrtr("2.348279423412479821374912874982374", 19) now works
+- results now automatically scrolls to the last calculation when a calculation is done
+- functions check for undefined variables
+- functions, when possible, now return perfectly exact answer if nprec is undefined
+- fixed bug in up and down buttons: buttons now work in IE and Chrome
+- adjusted line-height of input to look good in all browsers
+- set input spellcheck="false"

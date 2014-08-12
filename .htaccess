@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteRule ^([^1/][^/]*)/complex-math\.(.*)$ $1/calc.$2 [L]
+RewriteRule ^([^2/][^/]*)/calculator\.(.*)$ $1/calc.$2 [L]
+RewriteRule ^1\.([^/]+)/calc\.(.*)$ 1.$1/complex-math.$2 [L]
+RewriteRule ^2\.([^/]+)/calc\.(.*)$ 1.$1/calculator.$2 [L]
+
+RewriteRule ^1\.x/(.*)$ 1.13.1/$1 [L,env=nocache:true]
+RewriteRule ^2\.x/(.*)$ 2.1.1/$1 [L,env=nocache:true]
+RewriteRule ^3\.x/(.*)$ 3.0/$1 [L,env=nocache:true]
+RewriteRule ^latest/(.*)$ 3.x/$1 [L,env=nocache:true]
+
+Header set Cache-Control no-cache env=REDIRECT_nocache

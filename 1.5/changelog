@@ -1,0 +1,10 @@
+Version 1.5 - Nov 11, 2012 21:49
+
+- changed x[#] == "y" to x[#] == 'y'
+- replaced every a.substring(1, a.length); with a.replace("-", "");
+- improved algorithm and code for padZeros, trimZeros, mDotBack, mDotForward, getPrec, checkE, addr, subr, multr, divr, powr, floorr, ceilr, truncr, modr, roundr, sinsmall, cossmall
+- changed mDotBack and mDotForward to mDotRight and mDotLeft
+- replaced all uses of a % 2 with isInt(a)
+- improved error checking for binr
+- replaced all a[0] == '-' with isNeg(a)
+- results div now doesn't wrap

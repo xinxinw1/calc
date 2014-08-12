@@ -1,0 +1,3 @@
+Complex Number Calculator 2.1.1 - Sep 4, 2013 13:42
+
+- display now sets results.scrollLeft = 0; at end

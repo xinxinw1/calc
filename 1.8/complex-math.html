@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Complex Number Calculator 1.8</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="complex-math.css">
+  <script src="../../prec-math/1.2/prec-math.js"></script>
+  <script src="complex-math.js" defer="defer"></script>
+</head>
+
+<body>
+  <div id="top">
+    <div id="logo">Complex Number Calculator 1.8</div>
+    <div id="links">
+      <a href="#" onclick="toggleSide('debug');">Debug</a>
+    </div>
+  </div>
+  <div id="results"></div>
+  <div id="side" style="display: none">
+    <div id="title">Debug</div>
+    <div id="debugCont">
+      <table id="debug"></table>
+    </div>
+  </div>
+  <div id="bot">
+    <form onsubmit="addHist(this.a.value); math(this.a.value); checkSideWidth(); return false;">
+      <input type="text" name="a" value="-(53*3-2/(4i))+((34+53i)/(23-34i))*(-i)" onkeydown="return checkHist(this, event);" style="line-height: 34px; /* IE */" autocomplete="off" spellcheck="false">
+    </form>
+  </div>
+</body>
+
+</html>

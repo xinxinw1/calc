@@ -1,0 +1,5 @@
+Version 1.7 - Nov 26, 2012 22:05
+
+- seperated math library from Complex Number Calculator
+- title now is /***** Complex Number Calculator 1.7 *****/ instead of //////// Complex Number Calculator 1.6
+- removed type="text/javascript"

@@ -1,0 +1,14 @@
+Version 1.10 - Jan 27, 2013 13:47
+
+- removed useless try catch block in form.onsubmit
+- prec-math 1.4
+  - faster sqrt function
+  - neg -> negr
+  - nlen function
+  - faster sqrtrn function for calculating sqrt of integers
+  - faster pir using continued fraction
+  - relaxed precision requirements on cont fracs to 2*nlen(qn)-len(prod)-2 from ... -3
+  - added side effect variables genContFrac.lastN, genContFrac.lastP, genContFrac.lastQ and the like for simpContFrac
+  - ContFracs: undefined nprec now makes it go until a(n) or b(n) is null
+  - contFracs: qn can never equal 0
+
