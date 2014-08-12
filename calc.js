@@ -1,11 +1,11 @@
-/***** Complex Number Calculator 3.0 *****/
+/***** Complex Number Calculator 3.1.0 *****/
 
-/* require tools 4.0 */
-/* require prec-math 4.0 */
-/* require cmpl-math 1.0 */
-/* require math-check 2.0 */
-/* require math-parse 1.0 */
-/* require math-exec 3.0 */
+/* require tools 4.4.1 */
+/* require prec-math 4.3.0 */
+/* require cmpl-math 1.2.1 */
+/* require math-check 2.2.1 */
+/* require math-parse 1.2.0 */
+/* require math-exec 3.1.0 */
 
 ////// Import //////
 
@@ -19,11 +19,11 @@ var clr = $.clr;
 
 var debug = $("debug");
 function addToDebug(name, data){ // write to log
-  att(elm("tr", elm("td", txt(name)),
+  att(elm("tr", elm("td", txt(name + ":")),
                 elm("td", txt(data))), debug);
 }
 
-PMath.slogfn(addToDebug);
+PMath.logfn(addToDebug);
 
 ////// GUI //////
 
@@ -46,8 +46,8 @@ $("form").onsubmit = function (){
 };
 
 $("form").setAttribute("action", "javascript:" +
-  "display($('input').value,'Error: unknown (timeout?)');" + 
-  "PMath.logfn()('Error: ', 'unknown (timeout?)');");
+  "display($('input').value, 'Error: unknown (timeout?)');" + 
+  "addToDebug('Error', 'unknown (timeout?)');");
 
 $("input").onkeydown = function (e){
   return checkHist(this, e);

@@ -1,0 +1,8 @@
+# This file is a dependency definition
+# See https://github.com/xinxinw1/deps for more details
+tools master:tools.js lib
+prec-math master:prec-math.js lib
+cmpl-math master:cmpl-math.js lib
+math-check master:math-check.js lib
+math-parse master:math-parse.js lib
+math-exec master:math-exec.js lib
