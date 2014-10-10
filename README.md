@@ -80,7 +80,7 @@ Eventually I will. So far, I haven't got the time to implement an algorithm or f
 
 In the meantime, you can use the `arg(x+yi)` function to access `atan2(y, x)` and use the formulas found on [Wikipedia](http://en.wikipedia.org/wiki/Inverse_trigonometric_functions#Logarithmic_forms) with the variable system to calculate those functions. You'll probably have to fiddle with the precision arguments to ensure accuracy though.
 
-This is an open source project so you can also implement those functions yourself. Do send me a pull request so I can add your additions so everyone else can use them as well.
+This is an open source project so you can also implement those functions yourself. Send me a pull request so I can add your additions and everyone else can use them as well.
 
 ## How to download
 
