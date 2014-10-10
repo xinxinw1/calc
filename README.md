@@ -58,7 +58,7 @@ The mathematical operators `+` (add), `-` (subtract), `*` (multiply), `/` (divid
 
 Functions can be called by typing the name of the function, an open bracket `(`, the arguments separated by commas `,` and a close bracket `)`. (ex. `sin(50)` and `round(2.5382953, 3)` ) The supported functions are listed below.
 
-Take note that after the main arguments of almost every functions, there is an argument for "precision" or number of decimal places to calculate/round to. This means that `add(3.5334, 4.334, 2)` doesn't result in `9.8674`, but `7.87` instead, because the final `2` is the number of decimals to round the result to.
+Take note that after the main arguments of almost every function, there is an argument for "precision" or number of decimal places to calculate/round to. This means that `add(3.5334, 4.334, 2)` doesn't result in `9.8674`, but `7.87` instead, because the final `2` is the number of decimals to round the result to.
 
 Variables can be set by entering the variable name followed by an equal sign `=` and then the value you want to set it to. You can use multiple equal signs and it will set the right-most variable first. You can then refer to the variable in your expression as if it were a number. (ex. `x = 5*sin(3)/2`)
 
