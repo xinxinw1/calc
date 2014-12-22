@@ -58,7 +58,7 @@ The mathematical operators `+` (add), `-` (subtract), `*` (multiply), `/` (divid
 
 Functions can be called by typing the name of the function, an open bracket `(`, the arguments separated by commas `,` and a close bracket `)`. (ex. `sin(50)` and `round(2.5382953, 3)` ) The supported functions are listed below.
 
-Take note that after the main arguments of almost every functions, there is an argument for "precision" or number of decimal places to calculate/round to. This means that `add(3.5334, 4.334, 2)` doesn't result in `9.8674`, but `7.87` instead, because the final `2` is the number of decimals to round the result to.
+Take note that after the main arguments of almost every function, there is an argument for "precision" or number of decimal places to calculate/round to. This means that `add(3.5334, 4.334, 2)` doesn't result in `9.8674`, but `7.87` instead, because the final `2` is the number of decimals to round the result to.
 
 Variables can be set by entering the variable name followed by an equal sign `=` and then the value you want to set it to. You can use multiple equal signs and it will set the right-most variable first. You can then refer to the variable in your expression as if it were a number. (ex. `x = 5*sin(3)/2`)
 
@@ -80,7 +80,7 @@ Eventually I will. So far, I haven't got the time to implement an algorithm or f
 
 In the meantime, you can use the `arg(x+yi)` function to access `atan2(y, x)` and use the formulas found on [Wikipedia](http://en.wikipedia.org/wiki/Inverse_trigonometric_functions#Logarithmic_forms) with the variable system to calculate those functions. You'll probably have to fiddle with the precision arguments to ensure accuracy though.
 
-This is an open source project so you can also implement those functions yourself. Do send me a pull request so I can add your additions so everyone else can use them as well.
+This is an open source project so you can also implement those functions yourself. Send me a pull request so I can add your additions and everyone else can use them as well.
 
 ## How to download
 
