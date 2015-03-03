@@ -1,18 +1,18 @@
 [submodule "lib/prec-math"]
 	path = lib/prec-math
-	url = git@github.com:xinxinw1/prec-math.git
+	url = git@github.com:xinxinw1/prec-math
 [submodule "lib/tools"]
 	path = lib/tools
-	url = ../tools
+	url = git@github.com:xinxinw1/tools
 [submodule "lib/cmpl-math"]
 	path = lib/cmpl-math
-	url = ../cmpl-math
+	url = git@github.com:xinxinw1/cmpl-math
 [submodule "lib/math-check"]
 	path = lib/math-check
-	url = ../math-check
+	url = git@github.com:xinxinw1/math-check
 [submodule "lib/math-parse"]
 	path = lib/math-parse
-	url = ../math-parse
+	url = git@github.com:xinxinw1/math-parse
 [submodule "lib/math-exec"]
 	path = lib/math-exec
-	url = ../math-exec
+	url = git@github.com:xinxinw1/math-exec
