@@ -2,7 +2,7 @@
 
 This is an arbitrary precision online calculator.
 
-Run it at http://xinxinw1.github.io/calc/
+Run it at http://musiclifephilosophy.com/codes/calc/
 
 ## Examples
 
