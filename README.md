@@ -84,9 +84,8 @@ This is an open source project so you can also implement those functions yoursel
 
 ## How to download
 
-1. Go to https://github.com/xinxinw1/calc/releases and download the latest release.
-2. Extract the calc directory
-3. Open `index.html` in your browser.
+1. git clone --recursive https://github.com/xinxinw1/calc.git
+2. Open `index.html` in your browser.
 
 ## Predefined variables
 
