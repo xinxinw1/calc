@@ -1,4 +1,4 @@
-/***** Complex Number Calculator 3.1.1 *****/
+/***** Complex Number Calculator 3.2.0 *****/
 
 /* require tools 4.4.1 */
 /* require prec-math 4.3.0 */
