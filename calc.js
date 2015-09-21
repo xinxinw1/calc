@@ -1,11 +1,11 @@
-/***** Complex Number Calculator 3.2.0 *****/
+/***** Complex Number Calculator 3.2.1 *****/
 
-/* require tools 4.4.1 */
-/* require prec-math 4.3.0 */
-/* require cmpl-math 1.2.1 */
-/* require math-check 2.2.1 */
-/* require math-parse 1.2.0 */
-/* require math-exec 3.1.0 */
+/* require tools 4.6.0 */
+/* require prec-math 4.3.2 */
+/* require cmpl-math 1.2.3 */
+/* require math-check 2.2.2 */
+/* require math-parse 1.3.0 */
+/* require math-exec 3.1.1 */
 
 ////// Import //////
 
