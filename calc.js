@@ -1,6 +1,6 @@
-/***** Complex Number Calculator 3.2.1 *****/
+/***** Complex Number Calculator 3.3.0 *****/
 
-/* require tools 4.6.0 */
+/* require tools 4.7.1 */
 /* require prec-math 4.3.2 */
 /* require cmpl-math 1.2.3 */
 /* require math-check 2.2.2 */
@@ -14,6 +14,7 @@ var att = $.att;
 var elm = $.elm;
 var txt = $.txt;
 var clr = $.clr;
+var his = $.his;
 
 ////// Log Functions //////
 
@@ -35,6 +36,7 @@ $("form").onsubmit = function (){
   var input = $("input").value;
   if (rem(/\s/g, input) != ""){
     addHist(input);
+    $("input").value = "";
     clr($("debug"));
     try {
       display(input, PMath.calc(input));
@@ -48,10 +50,6 @@ $("form").onsubmit = function (){
 $("form").setAttribute("action", "javascript:" +
   "display($('input').value, 'Error: unknown (timeout?)');" + 
   "addToDebug('Error', 'unknown (timeout?)');");
-
-$("input").onkeydown = function (e){
-  return checkHist(this, e);
-};
 
 $("input").value = "-(53*3-2/(4i))+((34+53i)/(23-34i))*(-i)";
 $("input").style.lineHeight = "34px"; // IE
@@ -101,24 +99,4 @@ function checkSideWidth(){
   } else results.style.marginRight = "0";
 }
 
-var inhist = [];
-var histpos = -1;
-function addHist(input){
-  inhist.push(input);
-  histpos = inhist.length-1;
-}
-
-function checkHist(field, event){
-  var code = (event.key == undefined)?event.keyCode:event.key;
-  if ((code == "Up" || code == 38) && (histpos-1) > -1){ // up key
-    histpos = histpos-1;
-    field.value = inhist[histpos];
-    return false;
-  }
-  if ((code == "Down" || code == 40) && (histpos+1) < inhist.length){ // down
-    histpos = histpos+1;
-    field.value = inhist[histpos];
-    return false;
-  }
-  return true;
-}
+var addHist = his($("input")).add;
