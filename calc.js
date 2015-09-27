@@ -1,4 +1,4 @@
-/***** Complex Number Calculator 3.3.0 *****/
+/***** Complex Number Calculator 3.4.0 *****/
 
 /* require tools 4.7.1 */
 /* require prec-math 4.3.2 */
@@ -15,6 +15,7 @@ var elm = $.elm;
 var txt = $.txt;
 var clr = $.clr;
 var his = $.his;
+var bot = $.bot;
 
 ////// Log Functions //////
 
@@ -59,22 +60,20 @@ $("debug-link").onclick = function (){
   toggleSide('debug');
 };
 
+function inputCont(){
+  $('input').value = this.innerHTML;
+  return false;
+}
 
 var results = $("results");
 function display(orig, expr){
-  var write = "";
+  var e = elm("p", elm("a", {class: "b link", href: "#", onclick: inputCont}, orig),
+                   elm("br"),
+                   txt("= "),
+                   elm("a", {class: "link", href: "#", onclick: inputCont}, expr));
   
-  write += "<p>";
-  write += "<span class=\"b\">";
-  write += orig;
-  write += "</span>";
-  write += "<br>";
-  write += "<span>= ";
-  write += expr;
-  write += "</span></p>";
-  
-  results.innerHTML += write;
-  results.scrollTop = results.scrollHeight;
+  att(e, results);
+  bot(results);
   results.scrollLeft = 0;
   checkSideWidth();
 }
