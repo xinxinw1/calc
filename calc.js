@@ -1,4 +1,4 @@
-/***** Complex Number Calculator 3.4.1 *****/
+/***** Complex Number Calculator 3.4.2 *****/
 
 /* require tools 4.7.1 */
 /* require prec-math 4.3.2 */
@@ -37,19 +37,20 @@ $("form").onsubmit = function (){
   var input = $("input").value;
   if (rem(/\s/g, input) != ""){
     addHist(input);
-    $("input").value = "";
     clr($("debug"));
     try {
       display(input, PMath.calc(input));
     } catch (error){
       display(input, error);
     }
+    $("input").value = "";
   }
   return false;
 };
 
 $("form").setAttribute("action", "javascript:" +
   "display($('input').value, 'Error: unknown (timeout?)');" + 
+  "$('input').value = '';" +
   "addToDebug('Error', 'unknown (timeout?)');");
 
 $("input").value = "-(53*3-2/(4i))+((34+53i)/(23-34i))*(-i)";
