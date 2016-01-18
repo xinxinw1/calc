@@ -1,11 +1,11 @@
-/***** Complex Number Calculator 3.4.2 *****/
+/***** Complex Number Calculator 4.0.0 *****/
 
-/* require tools 4.7.1 */
-/* require prec-math 4.3.2 */
-/* require cmpl-math 1.2.3 */
-/* require math-check 2.2.2 */
-/* require math-parse 1.3.0 */
-/* require math-exec 3.1.1 */
+/* require tools 4.12.0 */
+/* require prec-math 5.0.0 */
+/* require cmpl-math 2.0.0 */
+/* require math-check 3.0.0 */
+/* require math-parse 2.0.0 */
+/* require math-exec 4.0.0 */
 
 ////// Import //////
 
@@ -21,8 +21,8 @@ var bot = $.bot;
 
 var debug = $("debug");
 function addToDebug(name, data){ // write to log
-  att(elm("tr", elm("td", txt(name + ":")),
-                elm("td", txt(data))), debug);
+  att(debug, elm("tr", elm("td", name + ":"),
+             elm("td", data)));
 }
 
 PMath.logfn(addToDebug);
@@ -68,12 +68,12 @@ function inputCont(){
 
 var results = $("results");
 function display(orig, expr){
-  var e = elm("p", elm("a", {class: "b link", href: "#", onclick: inputCont}, orig),
-                   elm("br"),
-                   txt("= "),
-                   elm("a", {class: "link", href: "#", onclick: inputCont}, expr));
-  
-  att(e, results);
+  att(results,
+    elm("p",
+      elm("a", {class: "b link", href: "#", onclick: inputCont}, orig),
+      elm("br"),
+      "= ",
+      elm("a", {class: "link", href: "#", onclick: inputCont}, expr)));
   bot(results);
   results.scrollLeft = 0;
   checkSideWidth();
