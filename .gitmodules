@@ -16,6 +16,3 @@
 [submodule "lib/math-exec"]
 	path = lib/math-exec
 	url = git@github.com:xinxinw1/math-exec
-[submodule "lib/lisp-tools"]
-	path = lib/lisp-tools
-	url = git@github.com:xinxinw1/lisp-tools.git
