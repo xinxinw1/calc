@@ -16,6 +16,11 @@ var txt = $.txt;
 var clr = $.clr;
 var his = $.his;
 var bot = $.bot;
+var lat = $.lat;
+var sli = $.sli;
+var apl = $.apl;
+var stf = $.stf;
+var dspStack = $.dspStack;
 
 ////// Log Functions //////
 
@@ -25,7 +30,10 @@ function addToDebug(name, data){ // write to log
              elm("td", data)));
 }
 
-PMath.logfn(addToDebug);
+function log(subj){
+  var rst = sli(arguments, 1);
+  return addToDebug(subj, apl(stf, rst));
+}
 
 ////// GUI //////
 
@@ -34,19 +42,25 @@ document.body.onresize = checkSideWidth;
 $("side").style.display = "none";
 
 $("form").onsubmit = function (){
+  lat(procSubmit);
+  return false;
+};
+
+function procSubmit(){
   var input = $("input").value;
   if (rem(/\s/g, input) != ""){
     addHist(input);
     clr($("debug"));
     try {
-      display(input, PMath.calc(input));
+      display(input, PMath.calc(input, log));
     } catch (error){
-      display(input, error);
+      display(input, error.toString());
+      addToDebug('Error', error.message);
+      console.log(dspStack(error));
     }
     $("input").value = "";
   }
-  return false;
-};
+}
 
 $("form").setAttribute("action", "javascript:" +
   "display($('input').value, 'Error: unknown (timeout?)');" + 
