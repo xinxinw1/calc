@@ -1,11 +1,11 @@
-/***** Complex Number Calculator 3.4.2 *****/
+/***** Complex Number Calculator *****/
 
-/* require tools 4.7.1 */
-/* require prec-math 4.3.2 */
-/* require cmpl-math 1.2.3 */
-/* require math-check 2.2.2 */
-/* require math-parse 1.3.0 */
-/* require math-exec 3.1.1 */
+/* require tools */
+/* require prec-math */
+/* require cmpl-math */
+/* require math-check */
+/* require math-parse */
+/* require math-exec */
 
 ////// Import //////
 
@@ -16,16 +16,24 @@ var txt = $.txt;
 var clr = $.clr;
 var his = $.his;
 var bot = $.bot;
+var lat = $.lat;
+var sli = $.sli;
+var apl = $.apl;
+var stf = $.stf;
+var dspStack = $.dspStack;
 
 ////// Log Functions //////
 
 var debug = $("debug");
 function addToDebug(name, data){ // write to log
-  att(elm("tr", elm("td", txt(name + ":")),
-                elm("td", txt(data))), debug);
+  att(debug, elm("tr", elm("td", name + ":"),
+             elm("td", data)));
 }
 
-PMath.logfn(addToDebug);
+function log(subj){
+  var rst = sli(arguments, 1);
+  return addToDebug(subj, apl(stf, rst));
+}
 
 ////// GUI //////
 
@@ -34,19 +42,25 @@ document.body.onresize = checkSideWidth;
 $("side").style.display = "none";
 
 $("form").onsubmit = function (){
+  lat(procSubmit);
+  return false;
+};
+
+function procSubmit(){
   var input = $("input").value;
   if (rem(/\s/g, input) != ""){
     addHist(input);
     clr($("debug"));
     try {
-      display(input, PMath.calc(input));
+      display(input, PMath.calc(input, log));
     } catch (error){
-      display(input, error);
+      display(input, error.toString());
+      addToDebug('Error', error.message);
+      console.log(dspStack(error));
     }
     $("input").value = "";
   }
-  return false;
-};
+}
 
 $("form").setAttribute("action", "javascript:" +
   "display($('input').value, 'Error: unknown (timeout?)');" + 
@@ -68,12 +82,12 @@ function inputCont(){
 
 var results = $("results");
 function display(orig, expr){
-  var e = elm("p", elm("a", {class: "b link", href: "#", onclick: inputCont}, orig),
-                   elm("br"),
-                   txt("= "),
-                   elm("a", {class: "link", href: "#", onclick: inputCont}, expr));
-  
-  att(e, results);
+  att(results,
+    elm("p",
+      elm("a", {class: "b link", href: "#", onclick: inputCont}, orig),
+      elm("br"),
+      "= ",
+      elm("a", {class: "link", href: "#", onclick: inputCont}, expr)));
   bot(results);
   results.scrollLeft = 0;
   checkSideWidth();
