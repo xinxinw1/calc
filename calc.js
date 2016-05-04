@@ -20,6 +20,7 @@ var lat = $.lat;
 var sli = $.sli;
 var apl = $.apl;
 var stf = $.stf;
+var foc = $.foc;
 var dspStack = $.dspStack;
 
 ////// Log Functions //////
@@ -77,6 +78,7 @@ $("debug-link").onclick = function (){
 
 function inputCont(){
   $('input').value += this.innerHTML;
+  foc($('input'));
   return false;
 }
 
