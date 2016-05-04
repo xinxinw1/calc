@@ -76,7 +76,7 @@ $("debug-link").onclick = function (){
 };
 
 function inputCont(){
-  $('input').value = this.innerHTML;
+  $('input').value += this.innerHTML;
   return false;
 }
 
