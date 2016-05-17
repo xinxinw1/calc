@@ -84,20 +84,16 @@ This is an open source project so you can also implement those functions yoursel
 
 ## How to download
 
-1. Go to https://github.com/xinxinw1/calc/releases and download the latest release.
-2. Extract the calc directory
+1. `git clone https://github.com/xinxinw1/calc.git`
+2. `cd calc`
+3. `git submodule update --init`
 3. Open `index.html` in your browser.
 
 ## How to run tests
 
-Go to each of these URLs:
+Download and then open `tests.html` in your browser.
 
-* http://musiclifephilosophy.com/codes/calc/lib/tools
-* http://musiclifephilosophy.com/codes/calc/lib/prec-math
-* http://musiclifephilosophy.com/codes/calc/lib/cmpl-math
-* http://musiclifephilosophy.com/codes/calc/lib/math-parse
-* http://musiclifephilosophy.com/codes/calc/lib/math-check
-* http://musiclifephilosophy.com/codes/calc/lib/math-exec
+Or, go to http://musiclifephilosophy.com/codes/calc/tests.html
 
 ## Predefined variables
 
