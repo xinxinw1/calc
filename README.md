@@ -72,7 +72,7 @@ Functions can be created by entering something like `f(x) = x^3 + 2*x^2 + 5` and
 
 You can set a variable and use it in one line with the comma (or progn) operator. Expressions separated with commas are evaluated from left to right. (ex. `x=3, y=4, sqrt(x^2+y^2)` )
 
-You can unset a variable with the unset function. (ex. after running `x = 3` and then `unset(x)`, running `x` should result in an error.)
+You can unset a variable with the unset function. (ex. after running `x = 3` and then `unset(x)`, running `x` should result in an error.) You can unset a function by calling unset with the function name (ex. `f(x) = x^2`, then run `unset(f)`)
 
 ## Troubleshooting
 
