@@ -88,6 +88,17 @@ This is an open source project so you can also implement those functions yoursel
 2. Extract the calc directory
 3. Open `index.html` in your browser.
 
+## How to run tests
+
+Go to each of these URLs:
+
+* http://musiclifephilosophy.com/codes/calc/lib/tools
+* http://musiclifephilosophy.com/codes/calc/lib/prec-math
+* http://musiclifephilosophy.com/codes/calc/lib/cmpl-math
+* http://musiclifephilosophy.com/codes/calc/lib/math-parse
+* http://musiclifephilosophy.com/codes/calc/lib/math-check
+* http://musiclifephilosophy.com/codes/calc/lib/math-exec
+
 ## Predefined variables
 
 ```
