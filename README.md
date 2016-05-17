@@ -163,12 +163,9 @@ conj(z)           conjugate of z
 
 #### Mathematical constants
 
-pi(p)             the circle constant to p decimal places
-e(p)              Euler's number
-phi(p)            the golden ratio
-ln2(p)            ln(2)
-ln5(p)            ln(5)
-ln10(p)           ln(10)
+piFn(p)             the circle constant to p decimal places
+eFn(p)              Euler's number
+phiFn(p)            the golden ratio
 
 ```
 
