@@ -78,7 +78,7 @@ For more accurate results, specify the number of decimal places explicitly like 
 
 Eventually I will. So far, I haven't got the time to implement an algorithm or formula for them yet and also to mathematically guarantee their accuracy.
 
-In the meantime, you can use the `arg(x+yi)` function to access `atan2(y, x)` and use the formulas found on [Wikipedia](http://en.wikipedia.org/wiki/Inverse_trigonometric_functions#Logarithmic_forms) with the variable system to calculate those functions. You'll probably have to fiddle with the precision arguments to ensure accuracy though.
+In the meantime, you can use `atan2(y, x)` and use the formulas found on [Wikipedia](http://en.wikipedia.org/wiki/Inverse_trigonometric_functions#Logarithmic_forms) with the variable system to calculate those functions. You'll probably have to fiddle with the precision arguments to ensure accuracy though.
 
 This is an open source project so you can also implement those functions yourself. Send me a pull request so I can add your additions and everyone else can use them as well.
 
@@ -98,12 +98,11 @@ Or, go to http://musiclifephilosophy.com/codes/calc/tests.html
 ## Predefined variables
 
 ```
-pi               the circle constant 3.14159... (16 decimal places by default
-e                Euler's number 2.71828...  You can calculate to more decimals
-phi              the golden ratio 1.61803...  by using the function versions
-ln2              the natural log of 2  0.693147...  listed in the function
-ln5              the natural log of 5  1.6094379...   reference)
-ln10             the natural log of 10  2.302585...
+Note: 16 decimal places by default, you can calculate to more decimals by
+      using the function versions listed in the function reference below
+pi               the circle constant 3.1415926535897932...
+e                Euler's number 2.7182818284590452...
+phi              the golden ratio 1.6180339887498948...
 ```
 
 ## Function reference
@@ -132,26 +131,6 @@ ceil(z, p)
 floor(z, p)
 trunc(z, p)
 
-#### Extended operation functions
-
-exp(z, p)         exponential function
-ln(z, p)          principal natural log (defined as ln(abs(z))+arg(z)*i)
-pow(z, w, p)      principal z^w (defined as exp(w*ln(z)))
-root(n, z, p)     nth root of z; if z is real and n is odd, return real root;
-                    n must be a real number like "5"
-sqrt(z, p)        square root of z
-cbrt(z, p)        cube root of z
-
-fact(x, p)        factorial of x; currently x must be an integer like "34";
-                    returns answer in complex number form
-bin(x, y, p)      binomial coefficient
-agm(x, y, p)      arithmetic geometric mean; x and y must be real
-
-sin(z, p)         complex sine of z
-cos(z, p)         complex cosine
-sinh(z, p)        hyperbolic sine
-cosh(z, p)        hyperbolic cosine
-
 #### Other operation functions
 
 abs(z, p)         absolute value of z
@@ -160,6 +139,29 @@ sgn(z, p)         complex signum (defined as z/abs(z), z != 0; 0, z == 0)
 re(z)             real part of z
 im(z)             imaginary part of z
 conj(z)           conjugate of z
+
+#### Extended operation functions
+
+exp(z, p)         exponential function
+ln(z, p)          principal natural log (defined as ln(abs(z))+arg(z)*i)
+pow(z, w, p)      principal z^w (defined as exp(w*ln(z)))
+root(n, z, p)     nth root of z; if z is real and n is real and odd, return real root
+sqrt(z, p)        square root of z
+cbrt(z, p)        cube root of z
+agm(z, w, p)      arithmetic geometric mean
+
+sin(z, p)         complex sine of z
+cos(z, p)         complex cosine
+sinh(z, p)        hyperbolic sine
+cosh(z, p)        hyperbolic cosine
+
+atan2(y, x, p)    two argument arctan
+
+#### Other functions
+
+fact(x)           factorial of x; currently x must be an integer like "34";
+                    returns answer in complex number form
+bin(x, y)         binomial coefficient
 
 #### Mathematical constants
 
