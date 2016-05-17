@@ -121,15 +121,15 @@ div(z, w, p)      divide
 
 #### Rounding functions
 
-rnd(z, p)         round both real and imaginary parts of z to p decimals
-cei(z, p)         ceiling
-flr(z, p)         floor
-trn(z, p)         truncate
+round(z, p)       round both real and imaginary parts of z to p decimals
+ceil(z, p)        ceiling
+floor(z, p)       floor
+trunc(z, p)       truncate
 
-round(z, p)       aliases of the functions above
-ceil(z, p)
-floor(z, p)
-trunc(z, p)
+rnd(z, p)         aliases of the functions above
+cei(z, p)
+flr(z, p)
+trn(z, p)
 
 #### Other operation functions
 
