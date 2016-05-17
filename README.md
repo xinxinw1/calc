@@ -8,7 +8,7 @@ Run it at http://musiclifephilosophy.com/codes/calc/
 
 Calculate pi to 1000 decimals
 
-`pi(1000)`
+`piFn(1000)`
 
 Pythagorean theorem
 
@@ -30,6 +30,12 @@ Divide 1 by 127 to 1000 decimal places
 Strange complex number formula that always results in a real number
 
 `x=2, y=3, sqrt(x+y*i)+sqrt(x-y*i)`
+
+Define a function
+
+`f(x) = x^3 + 2*x^2 + 5`  
+`f(2.5)`  
+`f(1+i)`
 
 Square root of -1
 
@@ -61,6 +67,8 @@ Functions can be called by typing the name of the function, an open bracket `(`,
 Take note that after the main arguments of almost every function, there is an argument for "precision" or number of decimal places to calculate/round to. This means that `add(3.5334, 4.334, 2)` doesn't result in `9.8674`, but `7.87` instead, because the final `2` is the number of decimals to round the result to.
 
 Variables can be set by entering the variable name followed by an equal sign `=` and then the value you want to set it to. You can use multiple equal signs and it will set the right-most variable first. You can then refer to the variable in your expression as if it were a number. (ex. `x = 5*sin(3)/2`)
+
+Functions can be created by entering something like `f(x) = x^3 + 2*x^2 + 5` and then calling `f(2.4)`.
 
 You can set a variable and use it in one line with the comma (or progn) operator. Expressions separated with commas are evaluated from left to right. (ex. `x=3, y=4, sqrt(x^2+y^2)` )
 
